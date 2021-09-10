@@ -1,0 +1,14 @@
+/* POSTS */
+export const FETCH_SUCCESS = 'POST/FETCH_SUCCESS';
+export const FETCH_DELETE = 'POST/FETCH_DELETE';
+
+/* EDIT */
+export const EDIT_FETCH_SUCCESS = 'EDIT/EDIT_FETCH_SUCCESS';
+export const EDIT_FETCH_SAVE = 'EDIT_FETCH_SAVE';
+export const EDIT_FETCH_CHANGE = 'EDIT_FETCH_CHANGE';
+
+/* APP */
+export const SHOW_LOADER = 'APP/SHOW_LOADER';
+export const HIDE_LOADER = 'APP/HIDE_LOADER';
+export const SHOW_ALERT = 'APP/SHOW_ALERT';
+export const HIDE_ALERT = 'APP/HIDE_ALERT';
