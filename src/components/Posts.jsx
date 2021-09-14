@@ -11,7 +11,7 @@ export default function Posts() {
   const loading = useSelector(state => state.app.loading);
   const alert = useSelector(state => state.app.alert);
 
-  useEffect(() => {
+   useEffect(() => {
     dispatch(fetchPosts());
   }, [dispatch]);
 

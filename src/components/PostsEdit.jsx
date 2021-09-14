@@ -8,10 +8,10 @@ import Alert from './Alert';
 export default function PostsEdit({ match }) {
   const dispatch = useDispatch();
   const editPosts = useSelector(state => state.editPosts.editPosts);
-  const redirect = useSelector(state => state.editPosts.redirect);
   const loading = useSelector(state => state.app.loading);
   const alert = useSelector(state => state.app.alert);
   const history = useHistory();
+
 
   useEffect(() => {
     dispatch(fetchEdit(match.params.id));
@@ -31,7 +31,6 @@ export default function PostsEdit({ match }) {
 
   if (alert) return <Alert text={alert} vision={'danger'} />
   if (loading) return <Loader />
-  if (redirect) history.push('/services')
 
   return (
     <form onSubmit={handleSubmit}>

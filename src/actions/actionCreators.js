@@ -6,9 +6,10 @@ import {
   FETCH_SUCCESS,
   EDIT_FETCH_SUCCESS,
   EDIT_FETCH_CHANGE,
-  EDIT_FETCH_SAVE
+  EDIT_FETCH_SAVE,
 } from "./actionTypes";
 import axios from 'axios';
+import history from '../history';
 
 const URL = process.env.REACT_APP_API_URL;
 
@@ -89,6 +90,7 @@ export const fetchEditSave = (id, name, price, content) => async dispatch => {
     })
     .then(() => dispatch(successActionSave()))
     .then(() => dispatch(hideLoader()))
+    .then(() => history.push('/services'))
     .catch((e) => dispatch(showAlert(`Произошла ошибка! Попробуйте обновить страницу ${e}`)));
 }
 

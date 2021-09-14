@@ -5,8 +5,7 @@ const initialState = {
     name: '',
     price: '',
     content: '',
-  },
-  redirect: false,
+  }
 }
 
 export const editReducer = (state = initialState, action) => {
@@ -24,7 +23,7 @@ export const editReducer = (state = initialState, action) => {
         }
       };
     case EDIT_FETCH_SAVE:
-      return {...initialState, redirect: true}
+      return {...initialState}
     default: return state
   }
 }
